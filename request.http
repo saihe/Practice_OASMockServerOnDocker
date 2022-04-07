@@ -1,0 +1,8 @@
+@baseurl = http://localhost
+
+# docs
+GET {{baseurl}}/docs
+
+###
+# ユーザ検索
+GET {{baseurl}}/user/1

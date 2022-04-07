@@ -1,0 +1,36 @@
+swagger: '2.0'
+info:
+  title: mock-server
+  description: npm mock server on docker.
+  version: 1.0.0
+host: localhost:8080
+produces:
+  - application/json
+consumes:
+  - application/json
+schemes:
+  - http
+paths:
+  /user/{id}:
+    get:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: number
+      responses:
+        200:
+          description: ユーザ
+          schema:
+            type: object
+            properties:
+              id:
+                type: number
+                example: 1
+              name:
+                type: string
+                example: Taro
+          examples:
+            application/json:
+              id: 1
+              name: Taro
